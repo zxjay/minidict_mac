@@ -66,6 +66,17 @@
     
     [mWindow.contentView addSubview:searchButton];
     [mWindow makeKeyAndOrderFront:mWindow];
+    
+    // menu
+    NSMenu *mainMenu = [NSMenu new];
+    NSMenuItem *mainItem = [NSMenuItem new];
+    [mainMenu addItem:mainItem];
+    [NSApp setMainMenu:mainMenu];
+    
+    NSMenu* subMenu = [NSMenu new];
+    NSMenuItem* quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@"q"];
+    [subMenu addItem:quitMenuItem];
+    [mainItem setSubmenu:subMenu];
 }
 
 - (void)searchButtonClick:(id)sender
@@ -99,6 +110,7 @@
     }
     
     [mResultWindow showResult:word];
+    [mWindow makeKeyAndOrderFront:mWindow];
 }
 
 - (void)initResultWindow
@@ -153,6 +165,9 @@
     if (commandSelector == @selector(insertNewline:)) {
         [self showResult:mComboBox.stringValue];
         return YES;
+    }
+    else if (commandSelector == @selector(cancelOperation:) && mResultWindow.isVisible) {
+        [mResultWindow setIsVisible:NO];
     }
     
     return NO;
