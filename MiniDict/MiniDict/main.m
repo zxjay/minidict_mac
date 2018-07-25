@@ -11,12 +11,8 @@
 
 int main(int argc, const char * argv[])
 {
-    NSArray *tl;
     NSApplication *app = [NSApplication sharedApplication];
-    [[NSBundle mainBundle] loadNibNamed:@"MainMenu" owner:app topLevelObjects:&tl];
-    
-    AppDelegate *appDelegate = [AppDelegate new];
-    [app setDelegate:appDelegate];
+    [app setDelegate:[AppDelegate new]];
     [app run];
     
     return 0;

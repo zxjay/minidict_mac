@@ -33,7 +33,7 @@
 - (void)initView
 {
     // main window
-    CGFloat mainMenuHeight = [[[NSApplication sharedApplication] mainMenu] menuBarHeight];
+    CGFloat mainMenuHeight = [NSStatusBar systemStatusBar].thickness + 1;
     NSRect mainScreenRect = [NSScreen mainScreen].frame;
     NSRect mdWindowRect;
     mdWindowRect.origin = CGPointMake(mainScreenRect.size.width - UI_MAIN_WIDTH, mainScreenRect.size.height - mainMenuHeight - UI_MAIN_HEIGHT);
