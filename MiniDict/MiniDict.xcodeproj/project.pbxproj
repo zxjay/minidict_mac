@@ -14,6 +14,8 @@
 		1CFA706B21009D8A00333849 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CFA706A21009D8A00333849 /* WebKit.framework */; };
 		1CFA70762108175E00333849 /* MDResultWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFA70752108175E00333849 /* MDResultWindow.m */; };
 		1CFA70792108177900333849 /* MDMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFA70782108177900333849 /* MDMainWindow.m */; };
+		1CFA707B2109693A00333849 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA707A2109693A00333849 /* MainMenu.xib */; };
+		1CFA707E210970C100333849 /* MDComboBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFA707D210970C100333849 /* MDComboBoxCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		1CFA70752108175E00333849 /* MDResultWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDResultWindow.m; sourceTree = "<group>"; };
 		1CFA70772108177900333849 /* MDMainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDMainWindow.h; sourceTree = "<group>"; };
 		1CFA70782108177900333849 /* MDMainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDMainWindow.m; sourceTree = "<group>"; };
+		1CFA707A2109693A00333849 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		1CFA707C210970C100333849 /* MDComboBoxCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDComboBoxCell.h; sourceTree = "<group>"; };
+		1CFA707D210970C100333849 /* MDComboBoxCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDComboBoxCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,9 @@
 				1CFA70752108175E00333849 /* MDResultWindow.m */,
 				1CFA70772108177900333849 /* MDMainWindow.h */,
 				1CFA70782108177900333849 /* MDMainWindow.m */,
+				1CFA707A2109693A00333849 /* MainMenu.xib */,
+				1CFA707C210970C100333849 /* MDComboBoxCell.h */,
+				1CFA707D210970C100333849 /* MDComboBoxCell.m */,
 			);
 			path = MiniDict;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA1C49321006C97001020FB /* Assets.xcassets in Resources */,
+				1CFA707B2109693A00333849 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA1C49921006C97001020FB /* main.m in Sources */,
+				1CFA707E210970C100333849 /* MDComboBoxCell.m in Sources */,
 				1CA1C4A721008A58001020FB /* MDWindow.m in Sources */,
 				1CA1C49121006C95001020FB /* AppDelegate.m in Sources */,
 				1CFA70792108177900333849 /* MDMainWindow.m in Sources */,

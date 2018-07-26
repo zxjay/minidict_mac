@@ -10,6 +10,7 @@
 #import "MDMainWindow.h"
 #import "MDWindow.h"
 #import "MDResultWindow.h"
+#import "MDComboBoxCell.h"
 
 #define UI_MAIN_WIDTH    300
 #define UI_MAIN_HEIGHT   27
@@ -49,6 +50,10 @@
     // combobox
     NSRect comboBoxRect = NSMakeRect(10, 0, UI_MAIN_WIDTH - 17, UI_MAIN_HEIGHT);
     mComboBox = [[NSComboBox alloc] initWithFrame:comboBoxRect];
+    NSComboBoxCell *comboBoxCell = [MDComboBoxCell new];
+    [comboBoxCell setUsesSingleLineMode:YES];
+    mComboBox.cell = comboBoxCell;
+    [mComboBox setMaximumNumberOfLines:1];
     [mComboBox setEditable:YES];
     [mComboBox setStringValue:@""];
     mComboBox.focusRingType = NSFocusRingTypeNone;
@@ -66,17 +71,6 @@
     
     [mWindow.contentView addSubview:searchButton];
     [mWindow makeKeyAndOrderFront:mWindow];
-    
-    // menu
-    NSMenu *mainMenu = [NSMenu new];
-    NSMenuItem *mainItem = [NSMenuItem new];
-    [mainMenu addItem:mainItem];
-    [NSApp setMainMenu:mainMenu];
-    
-    NSMenu* subMenu = [NSMenu new];
-    NSMenuItem* quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@"q"];
-    [subMenu addItem:quitMenuItem];
-    [mainItem setSubmenu:subMenu];
 }
 
 - (void)searchButtonClick:(id)sender
@@ -169,42 +163,11 @@
     else if (commandSelector == @selector(cancelOperation:) && mResultWindow.isVisible) {
         [mResultWindow setIsVisible:NO];
     }
+    else if (commandSelector == @selector(paste:)) {
+        [self showResult:mComboBox.stringValue];
+    }
     
     return NO;
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
