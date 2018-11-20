@@ -41,7 +41,6 @@
     mdWindowRect.size = CGSizeMake(UI_MAIN_WIDTH, UI_MAIN_HEIGHT);
     
     mWindow = [[MDWindow alloc] initWithContentRect:mdWindowRect styleMask:NSWindowStyleMaskFullSizeContentView backing:NSBackingStoreBuffered defer:YES];
-    mWindow.backgroundColor = NSColor.whiteColor;
     mWindow.movableByWindowBackground = YES;
     mWindow.delegate = self;
     [mWindow setLevel:NSMainMenuWindowLevel];
@@ -56,8 +55,9 @@
     [mComboBox setMaximumNumberOfLines:1];
     [mComboBox setEditable:YES];
     [mComboBox setStringValue:@""];
-    mComboBox.focusRingType = NSFocusRingTypeNone;
+    mComboBox.focusRingType = NSFocusRingTypeExterior;
     mComboBox.delegate = self;
+    mComboBox.bordered = YES;
     
     [mWindow.contentView addSubview:mComboBox];
     [mWindow makeFirstResponder:mComboBox];
@@ -120,6 +120,12 @@
 
 - (void)windowDidMove:(NSNotification *)notification
 {
+    if (mWindow.frame.origin.x >= [NSScreen mainScreen].frame.size.width - 8) {
+        NSRect rect = mWindow.frame;
+        rect.origin.x = [NSScreen mainScreen].frame.size.width - 8;
+        [mWindow setFrame:rect display:mWindow.isVisible];
+    }
+    
     [mResultWindow moveTo:[self getResultWindowRect]];
 }
 
@@ -130,6 +136,7 @@
 
 - (void)windowDidBecomeKey:(NSNotification *)notification
 {
+    [mWindow makeFirstResponder:mComboBox];
     [self selectText];
     if (mResultWindow.isVisible) {
         [mResultWindow orderFront];

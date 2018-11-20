@@ -123,6 +123,7 @@
 		1CA1C48421006C95001020FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MD;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = ZX;
 				TargetAttributes = {
