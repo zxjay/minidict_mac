@@ -81,7 +81,7 @@
     [mWebView setHidden:YES];
     
     NSString *keyWord = [word stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLPathAllowedCharacterSet];
-    NSString *target = [NSString stringWithFormat:@"https://cn.bing.com/dict/search?q=%@", keyWord];
+    NSString *target = [NSString stringWithFormat:@"https://www.bing.com/dict/search?q=%@&FORM=BDVSP6&cc=cn", keyWord];
     [mWebView setMainFrameURL:target];
 }
 

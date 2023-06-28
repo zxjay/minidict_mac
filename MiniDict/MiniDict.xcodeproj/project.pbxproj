@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C8D5F7D287D2B6200F2203F /* MiniDictTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D5F7C287D2B6200F2203F /* MiniDictTests.m */; };
 		1CA1C49121006C95001020FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1C49021006C95001020FB /* AppDelegate.m */; };
 		1CA1C49321006C97001020FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA1C49221006C97001020FB /* Assets.xcassets */; };
 		1CA1C49921006C97001020FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1C49821006C97001020FB /* main.m */; };
@@ -18,7 +19,19 @@
 		1CFA707E210970C100333849 /* MDComboBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFA707D210970C100333849 /* MDComboBoxCell.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1C8D5F7E287D2B6200F2203F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CA1C48421006C95001020FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CA1C48B21006C95001020FB;
+			remoteInfo = MiniDict;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1C8D5F7A287D2B6200F2203F /* MiniDictTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniDictTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8D5F7C287D2B6200F2203F /* MiniDictTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniDictTests.m; sourceTree = "<group>"; };
 		1CA1C48C21006C95001020FB /* MiniDict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniDict.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA1C48F21006C95001020FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CA1C49021006C95001020FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1C8D5F77287D2B6200F2203F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CA1C48921006C95001020FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +70,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C8D5F7B287D2B6200F2203F /* MiniDictTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C8D5F7C287D2B6200F2203F /* MiniDictTests.m */,
+			);
+			path = MiniDictTests;
+			sourceTree = "<group>";
+		};
 		1CA1C48321006C95001020FB = {
 			isa = PBXGroup;
 			children = (
 				1CA1C48E21006C95001020FB /* MiniDict */,
+				1C8D5F7B287D2B6200F2203F /* MiniDictTests */,
 				1CA1C48D21006C95001020FB /* Products */,
 				1CFA706921009D8A00333849 /* Frameworks */,
 			);
@@ -63,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				1CA1C48C21006C95001020FB /* MiniDict.app */,
+				1C8D5F7A287D2B6200F2203F /* MiniDictTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +130,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1C8D5F79287D2B6200F2203F /* MiniDictTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C8D5F82287D2B6200F2203F /* Build configuration list for PBXNativeTarget "MiniDictTests" */;
+			buildPhases = (
+				1C8D5F76287D2B6200F2203F /* Sources */,
+				1C8D5F77287D2B6200F2203F /* Frameworks */,
+				1C8D5F78287D2B6200F2203F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C8D5F7F287D2B6200F2203F /* PBXTargetDependency */,
+			);
+			name = MiniDictTests;
+			productName = MiniDictTests;
+			productReference = 1C8D5F7A287D2B6200F2203F /* MiniDictTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1CA1C48B21006C95001020FB /* MiniDict */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CA1C49D21006C97001020FB /* Build configuration list for PBXNativeTarget "MiniDict" */;
@@ -127,6 +175,11 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = ZX;
 				TargetAttributes = {
+					1C8D5F79287D2B6200F2203F = {
+						CreatedOnToolsVersion = 13.4.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1CA1C48B21006C95001020FB;
+					};
 					1CA1C48B21006C95001020FB = {
 						CreatedOnToolsVersion = 9.4.1;
 						ProvisioningStyle = Automatic;
@@ -152,11 +205,19 @@
 			projectRoot = "";
 			targets = (
 				1CA1C48B21006C95001020FB /* MiniDict */,
+				1C8D5F79287D2B6200F2203F /* MiniDictTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1C8D5F78287D2B6200F2203F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CA1C48A21006C95001020FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,6 +230,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C8D5F76287D2B6200F2203F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C8D5F7D287D2B6200F2203F /* MiniDictTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CA1C48821006C95001020FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,7 +253,54 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1C8D5F7F287D2B6200F2203F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CA1C48B21006C95001020FB /* MiniDict */;
+			targetProxy = 1C8D5F7E287D2B6200F2203F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1C8D5F80287D2B6200F2203F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = MD.MiniDictTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniDict.app/Contents/MacOS/MiniDict";
+			};
+			name = Debug;
+		};
+		1C8D5F81287D2B6200F2203F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = MD.MiniDictTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniDict.app/Contents/MacOS/MiniDict";
+			};
+			name = Release;
+		};
 		1CA1C49B21006C97001020FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -323,6 +439,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C8D5F82287D2B6200F2203F /* Build configuration list for PBXNativeTarget "MiniDictTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C8D5F80287D2B6200F2203F /* Debug */,
+				1C8D5F81287D2B6200F2203F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1CA1C48721006C95001020FB /* Build configuration list for PBXProject "MiniDict" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

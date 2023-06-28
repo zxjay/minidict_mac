@@ -37,10 +37,11 @@
     CGFloat mainMenuHeight = [NSStatusBar systemStatusBar].thickness + 1;
     NSRect mainScreenRect = [NSScreen mainScreen].frame;
     NSRect mdWindowRect;
-    mdWindowRect.origin = CGPointMake(mainScreenRect.size.width - UI_MAIN_WIDTH, mainScreenRect.size.height - mainMenuHeight - UI_MAIN_HEIGHT);
+    mdWindowRect.origin = CGPointMake(mainScreenRect.size.width - UI_MAIN_WIDTH * 2, mainScreenRect.size.height - mainMenuHeight - UI_MAIN_HEIGHT);
     mdWindowRect.size = CGSizeMake(UI_MAIN_WIDTH, UI_MAIN_HEIGHT);
     
     mWindow = [[MDWindow alloc] initWithContentRect:mdWindowRect styleMask:NSWindowStyleMaskFullSizeContentView backing:NSBackingStoreBuffered defer:YES];
+    mWindow.backgroundColor = NSColor.greenColor;
     mWindow.movableByWindowBackground = YES;
     mWindow.delegate = self;
     [mWindow setLevel:NSMainMenuWindowLevel];
@@ -120,12 +121,6 @@
 
 - (void)windowDidMove:(NSNotification *)notification
 {
-    if (mWindow.frame.origin.x >= [NSScreen mainScreen].frame.size.width - 8) {
-        NSRect rect = mWindow.frame;
-        rect.origin.x = [NSScreen mainScreen].frame.size.width - 8;
-        [mWindow setFrame:rect display:mWindow.isVisible];
-    }
-    
     [mResultWindow moveTo:[self getResultWindowRect]];
 }
 
